@@ -31,7 +31,7 @@ static int SynthCallback(short *wav, int numSamples, espeak_EVENT *events) {
 		if(events->type == espeakEVENT_END) {
 			samplerate = 0;
 		}
-		
+		samplerate = events->type;
 		events++;
 	}
 	if(numSamples > 0) {
